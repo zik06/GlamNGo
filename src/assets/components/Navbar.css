@@ -1,0 +1,86 @@
+
+.navbar {
+  background-color: #a59aca !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: fixed;         /* Fixed navbar */
+  top: 0;                  /* Stick to top */
+  width: 100%;             /* Full width */
+  z-index: 999;
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50 !important;
+}
+.navbar-nav .nav-link {
+  color: #2c3e50 !important;
+  margin: 0 10px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: #007bff !important;
+}
+.navbar-nav .nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #007bff;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.search-form {
+  margin: 0;
+}
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: #888;
+  pointer-events: none;
+}
+.search-input {
+  padding-left: 32px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  height: 36px;
+  transition: 0.3s;
+}
+.search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+.icon-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+.icon-stack:hover {
+  color: #007bff;
+}
+
+.icon-image {
+  font-size: 25px;
+}
+
+.icon-label {
+  font-size: 12px;
+  margin-top: 2px;
+}
