@@ -1,0 +1,65 @@
+.cards-wrapper {
+  max-width: 95%;
+  margin: 40px auto;
+}
+
+.section-group {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  padding-left: 15px;
+}
+
+.custom-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.custom-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 👇 Circle image style */
+.circle-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.circle-img {
+  width: 2000px;        /* Increased from 120px to 160px */
+  height: 2000px;       /* Increased from 120px to 160px */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #585353;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.circle-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.circle-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #585353;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.custom-card1 {
+  background-color: #fef3e2; /* 👈 Example: light peach */
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}

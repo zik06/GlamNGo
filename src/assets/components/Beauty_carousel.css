@@ -1,0 +1,24 @@
+.carousel-container1 {
+  /* margin-top: 1px;  */
+  margin-top: 10px; /* Space below navbar */
+  max-width: 80%;    /* Reduce width to 80% of the screen */
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-caption h3,
+.carousel-caption p {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
