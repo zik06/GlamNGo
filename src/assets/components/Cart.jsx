@@ -6,7 +6,17 @@ import './Cart.css'; // Ensure you have a Cart.css file for styling
 function Cart() {
   const { cartItems, removeFromCart, buyNow, increaseQuantity, decreaseQuantity } = useContext(CartContext);
 
-  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * (item.quantity || 1), 0);
+  const cleanPrice = (price) => {
+  if (!price) return 0;
+  const cleaned = String(price).replace(/[^\d.]/g, ''); // remove ₹ or commas
+  return parseFloat(cleaned) || 0;
+};
+
+  const totalPrice = cartItems.reduce((acc, item) => {
+  const price = cleanPrice(item.price);
+  return acc + price * (item.quantity || 1);
+}, 0);
+
 
   if (cartItems.length === 0) {
     return <div style={{ textAlign: 'center', marginTop: '60px' }}><h3>Your cart is empty</h3></div>;
@@ -21,7 +31,7 @@ function Cart() {
             <img src={item.img} alt={item.title} style={{ width: '80px', borderRadius: '8px' }} />
             <div>
               <h5>{item.title}</h5>
-              <p>${Number(item.price).toFixed(2)}</p>
+              <p>{item.price}</p>
               <div className="quantity-controls d-flex align-items-center gap-2 mt-2">
                 <Button variant="secondary" size="sm" onClick={() => decreaseQuantity(item.id)}>-</Button>
                 <span>{item.quantity || 1}</span>
