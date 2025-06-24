@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './Card_men.css'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
@@ -6,30 +7,39 @@ import Row from 'react-bootstrap/Row'
 function Card_men() {
   const sections = [
     {
-      title: 'Men Section',
+      title: 'Men Clothing',
       cards: [
-        { title: 'Men Shirt', text: 'Casual cotton shirt', img: '/images/Img1.jpeg' },
-        { title: 'Men T-shirt', text: 'Graphic tee for summer', img: '/images/Img2.jpg' },
-        { title: 'Men Blazer', text: 'Formal wear', img: '/images/Img2.jpg' },
-        { title: 'Men Jeans', text: 'Comfortable fit', img: '/images/Img1.jpeg' },
+        { id: 1, title: 'Men Shirt', text: 'Casual cotton shirt', img: '/images/Shirt.jpg' },
+        { id: 2, title: 'Men T-shirt', text: 'Graphic tee for summer', img: '/images/Mentshirt1.jpg' },
+        { id: 3, title: 'Men Blazer', text: 'Formal wear', img: '/images/Menblazer.jpg' },
+        { id: 4, title: 'Men Jeans', text: 'Comfortable fit', img: '/images/Mensjeans.jpg' },
       ],
     },
     {
-      title: 'Jewelry Section',
+      title: 'Men Accessories',
       cards: [
-        { title: 'Gold Earrings', text: 'Elegant and stylish', img: '/images/Img2.jpg' },
-        { title: 'Necklace Set', text: 'Party wear', img: '/images/Img2.jpg' },
-        { title: 'Bracelet', text: 'Trendy and sleek', img: '/images/Img2.jpg' },
-        { title: 'Anklet', text: 'Minimalist design', img: '/images/Img2.jpg' },
+        { id: 5, title: 'Watch', text: 'Elegant and stylish', img: '/images/Menwatch.jpg' },
+        { id: 6, title: 'Sunglasses', text: 'Party wear', img: '/images/Mensunglasses.jpg' },
+        { id: 7, title: 'Caps', text: 'Trendy and sleek', img: '/images/Cap.jpg' },
+        { id: 8, title: 'Belts', text: 'Leather Belt', img: '/images/Belt.jpg' },
       ],
     },
     {
-      title: 'Beauty Section',
+      title: 'Men Beauty',
       cards: [
-        { title: 'Lipstick', text: 'Long lasting matte', img: '/images/Img2.jpg' },
-        { title: 'Face Cream', text: 'Glowing skin formula', img: '/images/Img2.jpg' },
-        { title: 'Perfume', text: 'Fresh scent', img: '/images/Img2.jpg' },
-        { title: 'Nail Polish', text: 'Glossy finish', img: '/images/Img2.jpg' },
+        { id: 9, title: 'Shaving creams', text: 'clean shave', img: '/images/Shavingcream.jpg' },
+        { id: 10, title: 'Oil', text: 'Glowing skin formula', img: '/images/bearedoil.jpg' },
+        { id: 11, title: 'Perfume', text: 'Fresh scent', img: '/images/Perfume.jpg' },
+        { id: 12, title: 'Soap', text: 'Glossy finish', img: '/images/Soap.jpg' },
+      ],
+    },
+     {
+      title: 'Men Footwear',
+      cards: [
+        { id: 13, title: 'Sleeper', text: 'regular wear', img: '/images/Sleepers.jpg' },
+        { id: 14, title: 'sports shoes', text: 'Comfortable', img: '/images/Shoes.jpg' },
+        { id: 15, title: 'Boots', text: 'Fancy shoes', img: '/images/Boots.jpg' },
+        { id: 16, title: 'shoes', text: 'party wear', img: '/images/Casualshoes.jpg' },
       ],
     },
   ]
@@ -42,6 +52,7 @@ function Card_men() {
           <Row xs={1} md={4} className="g-4">
             {section.cards.map((card, index) => (
               <Col key={index}>
+              <Link to={`/product/${card.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <Card className="custom-card1">
                   {/* <Card.Img variant="top" src={card.img} alt={card.title} /> */}
                 <div className="circle-image-wrapper">
@@ -52,6 +63,7 @@ function Card_men() {
                     <Card.Text>{card.text}</Card.Text>
                   </Card.Body>
                 </Card>
+                </Link>
               </Col>
             ))}
           </Row>

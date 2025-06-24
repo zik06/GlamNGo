@@ -9,7 +9,7 @@ const Women_carousel = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/images/Img1.jpeg"
+            src="/images/Womencloth.jpg"
             alt="First slide"
           />
           <Carousel.Caption>

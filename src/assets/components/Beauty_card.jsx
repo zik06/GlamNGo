@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './Beauty_card.css'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
@@ -7,30 +8,39 @@ import Row from 'react-bootstrap/Row'
 const Beauty_card = () => {
   const sections = [
     {
-      title: 'Men Section',
+      title: 'Makeup Section',
       cards: [
-        { title: 'Men Shirt', text: 'Casual cotton shirt', img: '/images/Img1.jpeg' },
-        { title: 'Men T-shirt', text: 'Graphic tee for summer', img: '/images/Img2.jpg' },
-        { title: 'Men Blazer', text: 'Formal wear', img: '/images/Img2.jpg' },
-        { title: 'Men Jeans', text: 'Comfortable fit', img: '/images/Img1.jpeg' },
+        { id: 41, title: 'Lipstick', text: 'Matte Lipstick', img: '/images/Lipstic.jpg' },
+        { id: 42, title: 'Kajal', text: 'Long lasting', img: '/images/Kajal.jpg' },
+        { id: 43, title: 'Nail Polish', text: 'Glossy Finish', img: '/images/Nailpaint.jpg' },
+        { id: 44, title: 'Eyelinear', text: 'Waterproof longlasting', img: '/images/Eyelinear.jpg' },
       ],
     },
     {
-      title: 'Jewelry Section',
+      title: 'Skincare Section',
       cards: [
-        { title: 'Gold Earrings', text: 'Elegant and stylish', img: '/images/Img2.jpg' },
-        { title: 'Necklace Set', text: 'Party wear', img: '/images/Img2.jpg' },
-        { title: 'Bracelet', text: 'Trendy and sleek', img: '/images/Img2.jpg' },
-        { title: 'Anklet', text: 'Minimalist design', img: '/images/Img2.jpg' },
+        { id: 45, title: 'Face wash', text: 'Elegant and stylish', img: '/images/Facewash.jpg' },
+        { id: 46, title: 'face cream', text: 'Party wear', img: '/images/Facecream.jpg' },
+        { id: 47, title: 'Body wash', text: 'Trendy and sleek', img: '/images/Bodywash.jpg' },
+        { id: 48, title: 'Body Lotion', text: 'Minimalist design', img: '/images/Bodylotion.jpg' },
       ],
     },
     {
-      title: 'Beauty Section',
+      title: 'Haircare Section',
       cards: [
-        { title: 'Lipstick', text: 'Long lasting matte', img: '/images/Img2.jpg' },
-        { title: 'Face Cream', text: 'Glowing skin formula', img: '/images/Img2.jpg' },
-        { title: 'Perfume', text: 'Fresh scent', img: '/images/Img2.jpg' },
-        { title: 'Nail Polish', text: 'Glossy finish', img: '/images/Img2.jpg' },
+        { id: 49, title: 'Shampoo', text: 'Long lasting matte', img: '/images/Shampoo.jpg' },
+        { id: 50, title: 'Conditioner', text: 'Glowing skin formula', img: '/images/Conditioner.jpg' },
+        { id: 51, title: 'Hair oil', text: 'Fresh scent', img: '/images/Hairoil.jpg' },
+        { id: 52, title: 'Hair mask', text: 'Glossy finish', img: '/images/Hairmask.jpg' },
+      ], 
+    },
+    {
+      title: 'Mains Grooming',
+      cards: [
+        { id: 53, title: 'Trimmers', text: 'Long lasting matte', img: '/images/Trimmer.jpg' },
+        { id: 54, title: 'Beard oil', text: 'Glowing skin formula', img: '/images/bearedoil.jpg' },
+        { id: 55, title: 'Soap', text: 'Fresh scent', img: '/images/Soap.jpg' },
+        { id: 56, title: 'Shaving cream', text: 'Glossy finish', img: '/images/Shavingcream.jpg' },
       ],
     },
   ]
@@ -43,6 +53,7 @@ const Beauty_card = () => {
           <Row xs={1} md={4} className="g-4">
             {section.cards.map((card, index) => (
               <Col key={index}>
+              <Link to={`/product/${card.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <Card className="custom-card1">
                   {/* <Card.Img variant="top" src={card.img} alt={card.title} /> */}
                 <div className="circle-image-wrapper">
@@ -53,6 +64,7 @@ const Beauty_card = () => {
                     <Card.Text>{card.text}</Card.Text>
                   </Card.Body>
                 </Card>
+                </Link>
               </Col>
             ))}
           </Row>

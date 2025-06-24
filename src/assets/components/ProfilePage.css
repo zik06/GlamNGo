@@ -1,0 +1,9 @@
+.profile-dropdown-menu {
+  min-width: 180px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* remove offset */
+  
+}
