@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import './Cart.css'; // Ensure you have a Cart.css file for styling
 
 function Cart() {
-  const { cartItems, removeFromCart, clearCart, increaseQuantity, decreaseQuantity } = useContext(CartContext);
+  const { cartItems, removeFromCart, buyNow, increaseQuantity, decreaseQuantity } = useContext(CartContext);
 
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price * (item.quantity || 1), 0);
 
@@ -21,7 +21,7 @@ function Cart() {
             <img src={item.img} alt={item.title} style={{ width: '80px', borderRadius: '8px' }} />
             <div>
               <h5>{item.title}</h5>
-              <p>${item.price.toFixed(2)}</p>
+              <p>${Number(item.price).toFixed(2)}</p>
               <div className="quantity-controls d-flex align-items-center gap-2 mt-2">
                 <Button variant="secondary" size="sm" onClick={() => decreaseQuantity(item.id)}>-</Button>
                 <span>{item.quantity || 1}</span>
@@ -34,8 +34,8 @@ function Cart() {
       ))}
       <hr />
       <h4>Total: ${totalPrice.toFixed(2)}</h4>
-      <Button variant="secondary" onClick={clearCart} className="mt-3">
-        Clear Cart
+      <Button variant="secondary" onClick={buyNow} className="mt-3">
+        Buy Now
       </Button>
     </div>
   );
