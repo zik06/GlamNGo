@@ -74,6 +74,23 @@ export const allProducts = [
   { id: 66, title: 'Hairbands', text: 'Multi-colour fancy', img: '/images/Hairband.jpg', category: 'Jewelry', price: "$70" },
   { id: 67, title: 'Kids Necklace', text: 'Elegant and beautiful', img: '/images/Kidnecklace.jpg', category: 'Jewelry', price: "$70" },
   { id: 68, title: 'Headbands', text: 'fully stretchable ', img: '/images/Headbands.jpg', category: 'Jewelry', price: "$70" },
-  
+  { id: 69, title: 'MenC1 T-shirt', text: 'Graphic tee for summer', img: '/images/Shirts.jpg', category: 'Men', price: "$70" },
+  { id: 70, title: 'MenC2 T-shirt', text: 'Graphic tee for summer', img: '/images/Menbeautyproducts1.jpg', category: 'Men', price: "$70" },
+  { id: 71, title: 'MenC3 T-shirt', text: 'Graphic tee for summer', img: '/images/Menscloth.jpg', category: 'Men', price: "$70" },
+  { id: 72, title: 'Educational Toys', text: 'Play and Learn', img: '/images/Womencloth.jpg', category: 'Women', price: "$70"},
+  { id: 73, title: 'Educational Toys', text: 'Play and Learn', img: '/images/Img2.jpg', category: 'Women', price: "$70"},
+  { id: 74, title: 'Educational Toys', text: 'Play and Learn', img: '/images/Img3.jpg', category: 'Women', price: "$70"},
+  { id: 75, title: 'Nail Polish', text: 'Glossy Finish', img: '/images/Makeup.jpg', category: 'Beauty', price: "$70" },
+  { id: 76, title: 'Nail Polish', text: 'Glossy Finish', img: '/images/beautyproducts2.jpg', category: 'Beauty', price: "$70" },
+  { id: 77, title: 'Nail Polish', text: 'Glossy Finish', img: '/images/Menbeautyproducts.jpg', category: 'Beauty', price: "$70" },
+  { id: 78, title: 'Necklace Set', text: 'Party wear', img: '/images/Jwellery1.jpg', category: 'Jewelry', price: "$70" },
+  { id: 79, title: 'Necklace Set', text: 'Party wear', img: '/images/jewellery1.jpg', category: 'Jewelry', price: "$70" },
+  { id: 80, title: 'Necklace Set', text: 'Party wear', img: '/images/Jewellery2.jpg', category: 'Jewelry', price: "$70" },
+  { id: 81, title: 'Necklace Set', text: 'Party wear', img: '/images/Kidcloth.jpg', category: 'Kid', price: "$70" },
+  { id: 82, title: 'Necklace Set', text: 'Party wear', img: '/images/Kidcloth1.jpg', category: 'Kid', price: "$70" },
+  { id: 83, title: 'Necklace Set', text: 'Party wear', img: '/images/Kidcloth2.jpg', category: 'Kid', price: "$70" },
+
+
+
   // ... Add more products with unique `id`s
 ];

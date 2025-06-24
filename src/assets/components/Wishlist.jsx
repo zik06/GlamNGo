@@ -1,6 +1,4 @@
 
-
-      // src/assets/components/Wishlist.jsx
 import React, { useContext } from 'react';
 import { WishlistContext } from '../context/WishlistContext';
 import { Link } from 'react-router-dom';
@@ -21,7 +19,7 @@ const Wishlist = () => {
           <div className="wishlist-grid">
             {wishlistItems.map((item) => (
               <div key={item.id} className="wishlist-card">
-                <img src={item.image} alt={item.name} className="wishlist-image" />
+                <img src={item.img} alt={item.name} className="wishlist-image" />
                 <h3>{item.name}</h3>
                 <p>${item.price}</p>
                 <button onClick={() => removeFromWishlist(item.id)}>Remove</button>

@@ -8,7 +8,7 @@ function Carousal_men() {
     <div className="carousel-container">
       <Carousel>
         <Carousel.Item>
-        <Link to="/product/1">
+        <Link to="/product/69">
           <img
             className="d-block w-100"
             src="/images/Shirts.jpg"
@@ -21,7 +21,7 @@ function Carousal_men() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-        <Link to="/product/2">
+        <Link to="/product/70">
           <img
             className="d-block w-100"
             src="/images/Menbeautyproducts1.jpg"
@@ -34,7 +34,7 @@ function Carousal_men() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-        <Link to="/product/3">
+        <Link to="/product/71">
           <img
             className="d-block w-100"
             src="/images/Menscloth.jpg"
