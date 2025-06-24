@@ -11,7 +11,7 @@
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #2c3e50 !important;
+  color: #7118e5 !important;
 }
 .navbar-nav .nav-link {
   color: #2c3e50 !important;
@@ -84,3 +84,59 @@
   font-size: 12px;
   margin-top: 2px;
 }
+/* Profile popup menu styling */
+.profile-container {
+  position: relative;
+}
+
+.profile-popup-menu {
+  position: absolute;
+  top: 110%; /* Appears below the icon */
+  right: 0;
+  width: 220px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 9999;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.profile-popup-header {
+  font-weight: 600;
+  font-size: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 8px;
+}
+
+.profile-popup-link {
+  display: block;
+  padding: 6px 0;
+  font-size: 13px;
+  color: #333;
+  text-decoration: none;
+}
+
+.profile-popup-link:hover {
+  color: #ff3f6c;
+  text-decoration: none;
+}
+
+.popup-divider {
+  margin: 8px 0;
+  border-top: 1px solid #eee;
+}
+/* Cart Badge Styling */
+.cart-badge {
+  position: absolute;
+  top: 0px;
+  right: -10px;
+  background-color: red !important;
+  color: white !important;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+

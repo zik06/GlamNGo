@@ -1,0 +1,88 @@
+/* === Cart Page Styles (add only, no overwrite) === */
+.cart-wrapper {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.cart-wrapper h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  background-color: #fdf5e6; /* light peach tone like your cards */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: box-shadow 0.2s ease;
+}
+
+.cart-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.cart-item h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.cart-item p {
+  margin: 4px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.cart-wrapper h4 {
+  text-align: right;
+  margin-top: 30px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Clear Cart button styling */
+.cart-wrapper > button.mt-3 {
+  display: block;
+  margin-left: auto;
+  background-color: #f71643; /* Bootstrap secondary color */
+  border: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-wrapper > button.mt-3:hover {
+  background-color: #b5012b;
+}
+.quantity-controls button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  border-radius: 4px;
+}
+
+.quantity-controls span {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 600;
+}

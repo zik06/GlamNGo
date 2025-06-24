@@ -10,14 +10,23 @@ import Footer from './assets/components/Footer';
 import MenPage from './assets/components/MenPage';
 import WomenPage from './assets/components/WomenPage';
 import ProfilePage from './assets/components/ProfilePage';
-import WishlistPage from './assets/components/WishlistPage';
+import Wishlist from './assets/components/Wishlist';
 import KidsPage from './assets/components/KidsPage';
 import JewelryPage from './assets/components/JewelryPage';
 import BeautyPage from './assets/components/BeautyPage';
+import Signup from './assets/components/Signup';
+import Login from './assets/components/Login';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ProductDetails from './assets/components/ProductDetails';
+import Cart from './assets/components/Cart';
+import { CartProvider } from './assets/context/CartContext';
+import SearchResults from './assets/components/SearchResults';
+import { WishlistProvider } from './assets/context/WishlistContext';
 
 function App() {
   return (
+    <WishlistProvider>
+    <CartProvider>
     <BrowserRouter>
       <CustomNavbar />
       <Routes>
@@ -25,13 +34,20 @@ function App() {
         <Route path="/men" element={<MenPage />} />
         <Route path="/women" element={<WomenPage />} />
         <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/wishlist" element={<WishlistPage />} /> 
+        <Route path="/wishlist" element={<Wishlist />} /> 
         <Route path="/kids" element={<KidsPage />} /> 
         <Route path="/jewelry" element={<JewelryPage />} /> 
         <Route path="/beauty" element={<BeautyPage />} /> 
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/search" element={<SearchResults />} />
       </Routes>
       <Footer />
     </BrowserRouter>
+    </CartProvider>
+    </WishlistProvider>
   );
 }
 

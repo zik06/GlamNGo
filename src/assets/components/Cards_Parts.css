@@ -62,3 +62,11 @@
   transform: scale(1.02);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
+/* .cart-wrapper h2 {
+  margin-bottom: 20px;
+}
+
+.cart-item img {
+  object-fit: cover;
+} */
+/* === Cart Page Styles (add only, no overwrite) === */

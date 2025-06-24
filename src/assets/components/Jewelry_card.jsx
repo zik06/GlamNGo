@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './Jewelry_card.css'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
@@ -7,30 +8,30 @@ import Row from 'react-bootstrap/Row'
 const Jewelry_card = () => {
   const sections = [
     {
-      title: 'Men Section',
+      title: 'Womens section',
       cards: [
-        { title: 'Men Shirt', text: 'Casual cotton shirt', img: '/images/Img1.jpeg' },
-        { title: 'Men T-shirt', text: 'Graphic tee for summer', img: '/images/Img2.jpg' },
-        { title: 'Men Blazer', text: 'Formal wear', img: '/images/Img2.jpg' },
-        { title: 'Men Jeans', text: 'Comfortable fit', img: '/images/Img1.jpeg' },
+        { id: 57, title: 'Earrings', text: 'Elegant and stylish', img: '/images/Earing1.jpg' },
+        { id: 58, title: 'Necklace Set', text: 'Party wear', img: '/images/Necklace1.jpg' },
+        { id: 59, title: 'Bracelet', text: 'Trendy and sleek', img: '/images/Gbracelet.jpg' },
+        { id: 60, title: 'Watch', text: 'Minimalist design', img: '/images/Wwatch.jpg' },
       ],
     },
     {
-      title: 'Jewelry Section',
+      title: 'Mens section',
       cards: [
-        { title: 'Gold Earrings', text: 'Elegant and stylish', img: '/images/Img2.jpg' },
-        { title: 'Necklace Set', text: 'Party wear', img: '/images/Img2.jpg' },
-        { title: 'Bracelet', text: 'Trendy and sleek', img: '/images/Img2.jpg' },
-        { title: 'Anklet', text: 'Minimalist design', img: '/images/Img2.jpg' },
+        { id: 61, title: 'Chains', text: 'Elegant and stylish', img: '/images/Chain.jpg' },
+        { id: 62, title: 'Brooch', text: 'Party wear', img: '/images/Brooch.jpg' },
+        { id: 63, title: 'Bracelet', text: 'Trendy and sleek', img: '/images/Bbracelet.jpg' },
+        { id: 64, title: 'watches', text: 'Minimalist design', img: '/images/Menwatch.jpg' },
       ],
     },
     {
-      title: 'Beauty Section',
+      title: 'kids section',
       cards: [
-        { title: 'Lipstick', text: 'Long lasting matte', img: '/images/Img2.jpg' },
-        { title: 'Face Cream', text: 'Glowing skin formula', img: '/images/Img2.jpg' },
-        { title: 'Perfume', text: 'Fresh scent', img: '/images/Img2.jpg' },
-        { title: 'Nail Polish', text: 'Glossy finish', img: '/images/Img2.jpg' },
+        { id: 65, title: 'Hair clip', text: 'Fancy and colourful', img: '/images/Hairclip.jpg' },
+        { id: 66, title: 'hairbands', text: 'Multi-colour fancy', img: '/images/Hairband.jpg' },
+        { id: 67, title: 'Kids Necklace', text: 'Elegant and beautiful', img: '/images/Kidnecklace.jpg' },
+        { id: 68, title: 'headbands', text: 'fully stretchable ', img: '/images/Headband.jpg' },
       ],
     },
   ]
@@ -43,6 +44,7 @@ const Jewelry_card = () => {
           <Row xs={1} md={4} className="g-4">
             {section.cards.map((card, index) => (
               <Col key={index}>
+              <Link to={`/product/${card.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <Card className="custom-card1">
                   {/* <Card.Img variant="top" src={card.img} alt={card.title} /> */}
                 <div className="circle-image-wrapper">
@@ -53,6 +55,7 @@ const Jewelry_card = () => {
                     <Card.Text>{card.text}</Card.Text>
                   </Card.Body>
                 </Card>
+                </Link>
               </Col>
             ))}
           </Row>
