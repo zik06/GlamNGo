@@ -64,3 +64,18 @@
   margin-top: 30px;
   color: #888;
 }
+.footer-column ul li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+  color: #f56ab2;
+}

@@ -21,7 +21,7 @@ const Wishlist = () => {
               <div key={item.id} className="wishlist-card">
                 <img src={item.img} alt={item.name} className="wishlist-image" />
                 <h3>{item.name}</h3>
-                <p>${item.price}</p>
+                <p>{item.price}</p>
                 <button onClick={() => removeFromWishlist(item.id)}>Remove</button>
                 <Link to={`/product/${item.id}`}>View Details</Link>
               </div>
