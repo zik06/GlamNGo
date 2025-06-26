@@ -110,6 +110,9 @@ const products = [
   { id: 109, title: 'Designer Sherwani', text: 'Save up to 40%', img: '/images/Sherwani.jpg', price: "$34.99" },
   { id: 110, title: 'Soft indoor sleeper', text: 'under $16', img: '/images/Homesleeper.jpg', price: "$15.99" },
   { id: 111, title: 'Womens shirt', text: 'Special weekend offer', img: '/images/Womensshirt.jpg', price: "$21.99" },
+  { id: 112, title: 'Big Summer Sale!', text: 'Save up to 50% on clothing, beauty, and accessories. Dont miss out!', img: '/images/Homepage.jpg', price: "$21.99" },
+  { id: 113, title: 'New Arrivals', text: 'Discover the latest trends in mens and womens fashion now.', img: '/images/Homepage1.jpg', price: "$21.99" },
+  { id: 114, title: 'Festive Collection', text: 'Celebrate the season in style with our exclusive ethnic wear.', img: '/images/Homepage2.jpg', price: "$21.99" },
 
 
 ];

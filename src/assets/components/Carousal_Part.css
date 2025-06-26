@@ -190,6 +190,11 @@
   transition: all 0.3s ease;
 }
 
+.shop-now-sticker a{
+  color: white;
+  text-decoration: none;
+}
+
 .shop-now-sticker:hover {
   transform: scale(1.07);
   background: linear-gradient(45deg, #ff6600, #ff3300);
