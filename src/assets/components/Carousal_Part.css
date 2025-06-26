@@ -67,3 +67,130 @@
   border-radius: 5px;
   color: #fff;
 }
+.carousel-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  min-height: 300px;
+  display: flex;
+  background: linear-gradient(to right, #fff0f5, #ffe4e1); /* Soft banner background */
+  padding: 1.5rem 2rem;
+}
+
+.carousel-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #2c2c2c;
+  padding-right: 1.5rem;
+}
+
+.carousel-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #b30059;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-text p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0;
+}
+
+.carousel-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transparent-img {
+  object-fit: contain;
+  height: 100%;
+  background-color: transparent;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .carousel-slide {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .carousel-text,
+  .carousel-img {
+    width: 100%;
+    padding: 0;
+  }
+
+  .carousel-img img {
+    max-height: 200px;
+    margin-top: 1rem;
+  }
+}
+.shop-now-sticker {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #ff0066;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite ease-in-out;
+  width: fit-content;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.shop-now-sticker:hover {
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.carousel-text h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ff0033; /* Vibrant red for attention */
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+}
+
+.carousel-text p {
+  font-size: 1.2rem;
+  color: #2e2e2e;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.shop-now-sticker {
+  background: linear-gradient(45deg, #ff3300, #ff6600); /* Orange-red gradient */
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: pulse 1.5s infinite ease-in-out;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.shop-now-sticker:hover {
+  transform: scale(1.07);
+  background: linear-gradient(45deg, #ff6600, #ff3300);
+}

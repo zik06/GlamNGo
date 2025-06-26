@@ -1,91 +1,45 @@
-/*import React from 'react'
-import Carousel from 'react-bootstrap/Carousel';
-// import ExampleCarouselImage from 'components/ExampleCarouselImage';
-import './Carousal_Part.css';
 
-function Carousel_Part() {
-  return (
-    <Carousel>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="/images/Img1.jpeg"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="/images/Img2.jpg"
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="/images/Img3.jpg"
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-  );
-}
-
-export default Carousel_Part*/
 
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import './Carousal_Part.css';
 
 function Carousel_Part() {
+  const carouselItems = [
+    {
+      title: 'Big Summer Sale!',
+      text: 'Save up to 50% on clothing, beauty, and accessories. Dont miss out!',
+      img: '/images/Homepage.jpg',
+    },
+    {
+      title: 'New Arrivals',
+      text: 'Discover the latest trends in mens and womens fashion now.',
+      img: '/images/Homepage1.jpg',
+    },
+    {
+      title: 'Festive Collection',
+      text: 'Celebrate the season in style with our exclusive ethnic wear.',
+      img: '/images/Homepage2.jpg',
+    },
+  ];
+
   return (
     <div className="carousel-container">
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="/images/Img1.jpeg"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="/images/Img2.jpg"
-            alt="Second slide"
-          />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="/images/Img3.jpg"
-            alt="Third slide"
-          />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
+      <Carousel interval={4000} pause={false} controls={false} indicators={false}>
+        {carouselItems.map((item, index) => (
+          <Carousel.Item key={index}>
+            <div className="carousel-slide d-flex align-items-center">
+              <div className="carousel-text w-50 position-relative">
+                <h2>{item.title}</h2>
+                <p>{item.text}</p>
+                <div className="shop-now-sticker">Shop Now</div>
+              </div>
+              <div className="carousel-img w-50">
+                <img className="d-block w-100 transparent-img" src={item.img} alt={`Slide ${index + 1}`} />
+              </div>
+            </div>
+          </Carousel.Item>
+        ))}
       </Carousel>
     </div>
   );

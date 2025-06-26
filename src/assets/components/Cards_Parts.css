@@ -1,43 +1,6 @@
-/* .card {
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
 
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-.card-body {
-  padding: 20px;
-}
-
-.card-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 10px;
-}
-
-.card-text {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.row {
-  padding: 40px;
-} */
-
-.cards-wrapper {
+/* .cards-wrapper {
   max-width: 95%;
   margin: 40px auto;
 }
@@ -61,12 +24,61 @@
 .custom-card:hover {
   transform: scale(1.02);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
-/* .cart-wrapper h2 {
-  margin-bottom: 20px;
+} */
+ .cards-wrapper {
+  background-color: #f9f9f9;
 }
 
-.cart-item img {
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.custom-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 12px;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card img {
+  height: 220px;
   object-fit: cover;
-} */
-/* === Cart Page Styles (add only, no overwrite) === */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* SALE Badge */
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: crimson;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/* Make sure card has relative positioning */
+.custom-card {
+  position: relative;
+}
+
+/* Special section styling */
+.festive-section {
+  background: #fff3f3;
+  border: 2px solid #ffcccc;
+  border-radius: 10px;
+  padding: 20px;
+}
