@@ -22,6 +22,7 @@ import Cart from './assets/components/Cart';
 import { CartProvider } from './assets/context/CartContext';
 import SearchResults from './assets/components/SearchResults';
 import { WishlistProvider } from './assets/context/WishlistContext';
+import Buy from './assets/components/Buy';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/search" element={<SearchResults />} />
+        <Route path="/buy" element={<Buy />} />
       </Routes>
       <Footer />
     </BrowserRouter>

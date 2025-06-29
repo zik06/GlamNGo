@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import Button from 'react-bootstrap/Button';
 import './Cart.css'; // Ensure you have a Cart.css file for styling
+import { Link } from 'react-router-dom';
 
 function Cart() {
   const { cartItems, removeFromCart, buyNow, increaseQuantity, decreaseQuantity } = useContext(CartContext);
@@ -45,7 +46,7 @@ function Cart() {
       <hr />
       <h4>Total: ${totalPrice.toFixed(2)}</h4>
       <Button variant="secondary" onClick={buyNow} className="mt-3">
-        Buy Now
+        <Link to = "/buy">Buy Now</Link>
       </Button>
     </div>
   );

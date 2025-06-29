@@ -86,3 +86,8 @@
   text-align: center;
   font-weight: 600;
 }
+
+.mt-3 a{
+  text-decoration: none;
+  color: white;
+}

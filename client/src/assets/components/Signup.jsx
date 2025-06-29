@@ -11,14 +11,16 @@ function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3001/signup',{email,password})
-        .then(result => {console.log(result)
-        navigate('/login')
-        }).catch(err=> console.log(err))
     if (password !== confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
+    axios.post('http://localhost:3001/signup',{email,password})
+        .then(result => {console.log(result.data);
+          localStorage.setItem('userId', result.data.userId);
+          localStorage.setItem('isLoggedIn', 'true');
+        navigate('/login')
+        }).catch(err=> console.log(err))
     alert(`Signed up with ${email}`);
   };
 
@@ -66,7 +68,7 @@ function Signup() {
         </div>
         <button type="submit" className="btn btn-success w-100">Sign Up</button>
       </form>
-      <p className="mt-3 text-center">
+      <p className="mt-4 text-center">
         Already have an account? <Link to="/">Login</Link>
       </p>
     </div>
