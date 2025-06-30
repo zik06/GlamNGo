@@ -46,7 +46,7 @@ function Cart() {
       <hr />
       <h4>Total: ${totalPrice.toFixed(2)}</h4>
       <Button variant="secondary" onClick={buyNow} className="mt-3">
-        <Link to = "/buy">Buy Now</Link>
+        <Link to = "/buy"  state={{ cartItems }} className="text-white text-decoration-none">Buy Now</Link>
       </Button>
     </div>
   );

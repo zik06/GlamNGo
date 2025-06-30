@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Buy.css'; // Optional: for styling
 import { Link } from 'react-router-dom';
 import axios from "axios";
+import { useLocation } from 'react-router-dom';
+import { CartContext } from '../context/CartContext'; 
+
 
 function Buy() {
   const [formData, setFormData] = useState({
@@ -17,37 +20,9 @@ function Buy() {
   });
 
   const navigate = useNavigate();
-
-  /*const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const userId = localStorage.getItem('userId');
-    if (!userId) {
-      alert("User not logged in.");
-      return;
-    }
-
-    const orderData = {
-      ...formData,
-      userId: userId
-    };
-
-    try {
-      const response = await axios.post("http://localhost:3001/buy", orderData);
-      console.log("Order response:", response.data);
-
-      alert("Order placed successfully! 🚚");
-      navigate('/'); // Redirect to homepage or order confirmation
-    } catch (error) {
-      console.error("Order failed:", error);
-      alert("Failed to place order. Try again.");
-    }
-  };*/
+  const location = useLocation();
+const { clearCart } = useContext(CartContext);
+const cartItems = location.state?.cartItems || [];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -57,7 +32,7 @@ function Buy() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const userId = localStorage.getItem('userId'); // ✅ Optional
+    const userId = localStorage.getItem('userId'); 
     const orderData = {
       userId: userId || null,  // optional userId
     shippingDetails: {
@@ -69,14 +44,20 @@ function Buy() {
       state: formData.state,
       zip: formData.zip,
       country: formData.country
-    }
+    },
+     items: cartItems.map(item => ({
+      title: item.title,
+      price: item.price,
+      quantity: item.quantity || 1
+    }))
     };
 
     try {
       const response = await axios.post("http://localhost:3001/buy", orderData);
       console.log("Order response:", response.data);
 
-      alert("Order placed successfully! 🚚");
+      alert("Order placed successfully!");
+      clearCart();
       navigate('/');
     } catch (error) {
       console.error("Order failed:", error);

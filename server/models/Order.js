@@ -16,6 +16,13 @@ const OrderSchema = new mongoose.Schema({
     zip: String,
     country: String
   },
+  items: [
+    {
+      title: String,
+      price: String,
+      quantity: Number
+    }
+  ],
   placedAt: {
     type: Date,
     default: Date.now

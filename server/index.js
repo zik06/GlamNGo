@@ -2,7 +2,7 @@ const express = require("express")
 const mongoose = require('mongoose')
 const cors = require("cors")
 const employeeModel = require('./models/Employee')
-const orderModel = require('./models/Order')
+const Order = require('./models/Order')
 
 const app = express()
 app.use(express.json()) //Middleware to parse incoming JSON requests.
@@ -25,29 +25,31 @@ app.post("/Login", (req,res) => {
         }
     })
 })
-
-// app.post('/signup', (req,res) => {
-//     employeeModel.create(req.body)
-//     .then(employees => res.json(employees))
-//     .catch(err => res.json(err))
-// })
-
 app.post('/signup', async (req, res) => {
   try {
     const user = await employeeModel.create(req.body);
-    res.json({ message: "User created", userId: user._id }); // ✅ send userId
+    res.json({ message: "User created", userId: user._id }); 
   } catch (err) {
     res.status(500).json({ error: err });
   }
 });
 
-app.post("/buy", async (req, res) => {
+app.post('/buy', async (req, res) => {
   try {
-    const order = await orderModel.create(req.body);
-    res.json({ message: "Order placed successfully", order });
-  } catch (error) {
-    console.error("Order creation error:", error.message);
-    res.status(500).json({ error: error.message });
+    const { userId, shippingDetails, items } = req.body;
+
+    const newOrder = new Order({
+      userId: userId || null,
+      shippingDetails,
+      items,
+      placedAt: new Date()
+    });
+
+    const savedOrder = await newOrder.save();
+    res.json(savedOrder);
+  } catch (err) {
+    console.warn("Order creation error:", err);
+    res.status(500).json({ error: "Order creation failed" });
   }
 });
 
