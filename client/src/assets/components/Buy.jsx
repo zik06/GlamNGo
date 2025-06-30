@@ -59,8 +59,17 @@ function Buy() {
 
     const userId = localStorage.getItem('userId'); // ✅ Optional
     const orderData = {
-      ...formData,
-      userId: userId || null  // ✅ Send null if guest user
+      userId: userId || null,  // optional userId
+    shippingDetails: {
+      fullName: formData.fullName,
+      phone: formData.phone,
+      addressLine1: formData.addressLine1,
+      addressLine2: formData.addressLine2,
+      city: formData.city,
+      state: formData.state,
+      zip: formData.zip,
+      country: formData.country
+    }
     };
 
     try {

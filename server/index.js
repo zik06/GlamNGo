@@ -46,7 +46,7 @@ app.post("/buy", async (req, res) => {
     const order = await orderModel.create(req.body);
     res.json({ message: "Order placed successfully", order });
   } catch (error) {
-    console.error("❌ Order creation error:", error.message);
+    console.error("Order creation error:", error.message);
     res.status(500).json({ error: error.message });
   }
 });
